@@ -1,9 +1,3 @@
-/*
- * File: WaitQueue.h
- * Author: Samarth kant (Part 1)
- * Description: Linked FIFO Queue for rooms requested while already occupied.
- */
-
 #ifndef WAIT_QUEUE_H
 #define WAIT_QUEUE_H
 
@@ -44,7 +38,6 @@ public:
 
     bool dequeue(WaitRequest &out);
 
-    // Extracts the earliest request matching time, capacity, and purpose
     WaitRequest *extractFitting(int day, int from, int to, int capacity,
                                 const std::function<bool(Purpose)> &allowsFn);
 
@@ -52,4 +45,4 @@ public:
     WaitRequest *getFront() const { return front_; }
 };
 
-#endif // WAIT_QUEUE_H
+#endif

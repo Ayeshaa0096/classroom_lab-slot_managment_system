@@ -1,9 +1,3 @@
-/*
- * File: WaitQueue.cpp
- * Author: Samarth kant (Part 1)
- * Description: Implementation of the FIFO Waiting Queue for rooms.
- */
-
 #include "WaitQueue.h"
 #include <iostream>
 #include <iomanip>

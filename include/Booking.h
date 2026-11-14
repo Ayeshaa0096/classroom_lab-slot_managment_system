@@ -1,9 +1,3 @@
-/*
- * File: Booking.h
- * Author: Samarth kant (Part 1)
- * Description: Node structure for bookings and manual global linked list registry.
- */
-
 #ifndef BOOKING_H
 #define BOOKING_H
 
@@ -20,10 +14,9 @@ struct Booking {
     int from = 0;
     int to = 0;
     Booking *next = nullptr;
-    Booking *registryNext = nullptr; // Link for global registry list
+    Booking *registryNext = nullptr;
 };
 
-// Global Linked List Registry (non-STL)
 class BookingList {
 private:
     Booking *head = nullptr;
@@ -32,7 +25,6 @@ public:
     BookingList() = default;
     ~BookingList();
 
-    // Disable copy semantics
     BookingList(const BookingList &) = delete;
     BookingList &operator=(const BookingList &) = delete;
 
@@ -42,4 +34,4 @@ public:
     Booking *getHead() const { return head; }
 };
 
-#endif // BOOKING_H
+#endif

@@ -1,13 +1,6 @@
-/*
- * File: Booking.cpp
- * Author: Samarth kant (Part 1)
- * Description: Implementation of the global booking registry.
- */
-
 #include "Booking.h"
 
 BookingList::~BookingList() {
-    // Node memory is deallocated by the respective Room destructor
     head = nullptr;
 }
 
